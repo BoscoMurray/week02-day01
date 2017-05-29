@@ -8,21 +8,21 @@ class TestStudent < MiniTest::Test
   end
 
   def test_get_name
-    assert_equal("Zippy", @student01.get_name)
+    assert_equal("Zippy", @student01.name)
   end
 
   def test_get_cohort
-    assert_equal(13, @student01.get_cohort)
+    assert_equal(13, @student01.cohort)
   end
 
   def test_set_name
-    @student01.set_name("Bungle")
-    assert_equal("Bungle", @student01.get_name)
+    @student01.name=("Bungle")
+    assert_equal("Bungle", @student01.name)
   end
 
   def test_set_cohort
-    @student01.set_cohort(14)
-    assert_equal(14, @student01.get_cohort)
+    @student01.cohort=(14)
+    assert_equal(14, @student01.cohort)
   end
 
   def test_talk
