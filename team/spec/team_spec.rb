@@ -32,4 +32,19 @@ class TestTeam < MiniTest::Test
     assert_equal(4, @team01.players.count)
   end
 
+  def test_update_points__win
+    @team01.update_points("win")
+    assert_equal(3, @team01.points)
+  end
+
+  def test_update_points__draw
+    @team01.update_points("draw")
+    assert_equal(1, @team01.points)
+  end
+
+  def test_update_points__lose
+    @team01.update_points("lose")
+    assert_equal(0, @team01.points)
+  end
+
 end
