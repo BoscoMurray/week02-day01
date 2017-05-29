@@ -27,4 +27,9 @@ class TestTeam < MiniTest::Test
     assert_equal("Zsolt", @team01.coach)
   end
 
+  def test_new_player
+    @team01.new_player("Sam")
+    assert_equal(4, @team01.players.count)
+  end
+
 end
